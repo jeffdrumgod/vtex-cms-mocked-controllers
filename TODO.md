@@ -1,0 +1,4 @@
+- [ ] Revisar controller BuyInPage. Há conteúdo customizado nele que precisa estar genérico para trabalhar com qualquer ID de conteúdo de produto
+- [ ] searchResult precisa ter o conteúdo genérico, hoje está com um HTML de prateleira que não faz sentido, precisa ser genérico para o uso dentro do projeto `parser`. O mesmo se aplica em obter os valores default como ID da prateleira do projeto
+- [ ] singleDepartmentNavigator precisa obter o modelo de outra loja, pois conteúdo está com tags que não fazem parte do render padrão
+- [ ] Trocar de conteúdo de ID da loja e demais pelos IDs genéricos. Exemplo: {{STORE_ID}}
