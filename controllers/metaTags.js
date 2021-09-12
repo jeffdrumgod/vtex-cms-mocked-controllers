@@ -14,6 +14,6 @@ module.exports = {
   <meta name="copyright" content="Copyright text meta" />
   <meta name="vtex-version" content="1.4.709.1271" />
   <meta http-equiv="pragma" content="no-cache" />
-  <meta name="robots" content="noindex,nofollow">
+  <meta name="robots" content="index,follow">
 `,
 };
