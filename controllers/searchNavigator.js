@@ -3,128 +3,202 @@ module.exports = {
   title: '',
   description: '',
   example: '<vtex.cmc:searchNavigator />',
-  rendered: `<script type="text/javascript" language="javascript">
-  $(document).ready(function() {
-      partialSearchUrl = '/busca?fq=C%3a%2f10%2f&PS=12&';
-  });
+  rendered: `
+  <!-- START // Script quanto em página de resultado de busca sem filtro por departamento -->
+<script type="text/javascript" language="javascript">
+    $(document).ready(function() {
+        partialSearchUrl = '/busca?map=c%2cft&';
+    });
 </script>
-<div class="navigation-tabs">
-  <div class="menu-departamento">
-      <span class="rt"></span><span class="rb"></span>
+<!-- END // Script quanto em página de resultado de busca sem filtro por departamento -->
+<div id="ctl00_Conteudo_ctl02_divSideBar" class="navigation">
+    <div id="ctl00_Conteudo_ctl02_divSideBarUnica1" class="menu-departamento">
+      <span class="rt"></span>
+      <span class="rb"></span>
       <!-- START // Menu quanto em busca sem filtro por departamento -->
-      <h3 class="sapatos"><span></span><a href="http://www.chachaboutique.com.br/sapatos">Sapatos</a></h3>
+      <h3 class="sapatos"><span></span><a href="{{STORE_URL_VTEX}}sapatos">Sapatos</a></h3>
       <ul class="sapatos">
-          <li><a href="http://www.chachaboutique.com.br/sapatos/scarpins">Scarpins</a></li>
-          <li><a href="http://www.chachaboutique.com.br/sapatos/peep-toes">Peep Toes</a></li>
-          <li><a href="http://www.chachaboutique.com.br/sapatos/sandalias">Sandálias</a></li>
-          <li><a href="http://www.chachaboutique.com.br/sapatos/botas">Botas</a></li>
-          <li class="lista-completa"><a href="http://www.chachaboutique.com.br/sapatos">Lista completa<span></span></a></li>
+          <li><a href="{{STORE_URL_VTEX}}sapatos/scarpins">Scarpins</a></li>
+          <li><a href="{{STORE_URL_VTEX}}sapatos/peep-toes">Peep Toes</a></li>
+          <li><a href="{{STORE_URL_VTEX}}sapatos/sandalias">Sandálias</a></li>
+          <li><a href="{{STORE_URL_VTEX}}sapatos/botas">Botas</a></li>
       </ul>
-      <h3 class="roupas even"><span></span><a href="http://www.chachaboutique.com.br/roupas">Roupas</a></h3>
+      <h3 class="roupas even"><span></span><a href="{{STORE_URL_VTEX}}roupas">Roupas</a></h3>
       <ul class="roupas even">
-          <li><a href="http://www.chachaboutique.com.br/roupas/blusas">Blusas</a></li>
-          <li><a href="http://www.chachaboutique.com.br/roupas/calcas">Calças</a></li>
-          <li><a href="http://www.chachaboutique.com.br/roupas/camisas">Camisas</a></li>
-          <li><a href="http://www.chachaboutique.com.br/roupas/casacos">Casacos</a></li>
-          <li><a href="http://www.chachaboutique.com.br/roupas/jaquetas">Jaquetas</a></li>
-          <li><a href="http://www.chachaboutique.com.br/roupas/saias">Saias</a></li>
-          <li><a href="http://www.chachaboutique.com.br/roupas/shorts">Shorts</a></li>
-          <li><a href="http://www.chachaboutique.com.br/roupas/macacao">Macacão</a></li>
-          <li><a href="http://www.chachaboutique.com.br/roupas/vestidos">Vestidos</a></li>
-          <li><a href="http://www.chachaboutique.com.br/roupas/blazer">Blazer</a></li>
-          <li><a href="http://www.chachaboutique.com.br/roupas/jeans">Jeans</a></li>
-          <li><a href="http://www.chachaboutique.com.br/roupas/tricot">Tricot</a></li>
-          <li><a href="http://www.chachaboutique.com.br/roupas/body">Body</a></li>
-          <li><a href="http://www.chachaboutique.com.br/roupas/cropped">Cropped</a></li>
-          <li class="lista-completa"><a href="http://www.chachaboutique.com.br/roupas">Lista completa<span></span></a></li>
+          <li><a href="{{STORE_URL_VTEX}}roupas/blusas">Blusas</a></li>
+          <li><a href="{{STORE_URL_VTEX}}roupas/calcas">Calças</a></li>
+          <li><a href="{{STORE_URL_VTEX}}roupas/camisas">Camisas</a></li>
+          <li><a href="{{STORE_URL_VTEX}}roupas/casacos">Casacos</a></li>
+          <li><a href="{{STORE_URL_VTEX}}roupas/jaquetas">Jaquetas</a></li>
+          <li><a href="{{STORE_URL_VTEX}}roupas/saias">Saias</a></li>
+          <li><a href="{{STORE_URL_VTEX}}roupas/shorts">Shorts</a></li>
+          <li><a href="{{STORE_URL_VTEX}}roupas/macacao">Macacão</a></li>
+          <li><a href="{{STORE_URL_VTEX}}roupas/vestidos">Vestidos</a></li>
+          <li><a href="{{STORE_URL_VTEX}}roupas/blazer">Blazer</a></li>
+          <li><a href="{{STORE_URL_VTEX}}roupas/jeans">Jeans</a></li>
+          <li><a href="{{STORE_URL_VTEX}}roupas/tricot">Tricot</a></li>
+          <li><a href="{{STORE_URL_VTEX}}roupas/body">Body</a></li>
+          <li><a href="{{STORE_URL_VTEX}}roupas/cropped">Cropped</a></li>
       </ul>
       <!-- END // Menu quanto em busca sem filtro por departamento -->
+      <!-- START // Menu quanto em busca contendo lista de categorias e filtros -->
       <div>
-          <div class="menu-navegue">
-              <a title="Navegue" class="search-navigator-tab tab-navegue-ativo" href="#">Navegue</a><a title="Refinar Resultado" class="search-navigator-tab tab-refinar" href="#">Refinar Resultado</a>
-          </div>
-          <div class="search-multiple-navigator" style="display: none;">
-              <h3 class="roupas"><span></span><a href="/roupas" title="Roupas">Roupas</a></h3>
-              <h4 class="roupas"><span></span><a href="/roupas" title="Roupas">Roupas</a></h4>
-              <a title="Refinar Resultado" class="bt-refinar search-filter-button even" href="#">Refinar Resultado</a>
-              <fieldset class="refino even Características">
-                  <h5 class=" even Características">Tamanho</h5>
-                  <div class="">
-                      <label>
-                          <input rel="fq=specificationFilter_21:P" class="multi-search-checkbox" type="checkbox" name="P" value="P" />P (39)</label>
-                          <label>
-                              <input rel="fq=specificationFilter_21:M" class="multi-search-checkbox" type="checkbox" name="M" value="M" />M (38)</label>
-                              <label>
-                                  <input rel="fq=specificationFilter_21:G" class="multi-search-checkbox" type="checkbox" name="G" value="G" />G (37)</label>
-                                  <label>
-                                      <input rel="fq=specificationFilter_21:GG" class="multi-search-checkbox" type="checkbox" name="GG" value="GG" />GG (13)</label>
-                                  </div>
-                              </fieldset>
-                          </div>
-                          <div class="search-single-navigator" style="display:block">
-                              <h3 class="roupas"><span></span><a href="/roupas" title="Roupas">Roupas</a></h3>
-                              <h4 class="roupas even"><a href="/roupas/blusas?PS=12" title="Blusas">Blusas (27)</a></h4>
-                              <ul class="blusas even">
-                              </ul>
-                              <h4 class="roupas even"><a href="/roupas/calcas?PS=12" title="Calças">Calças (9)</a></h4>
-                              <ul class="calcas even">
-                              </ul>
-                              <h4 class="roupas even"><a href="/roupas/camisas?PS=12" title="Camisas">Camisas (6)</a></h4>
-                              <ul class="camisas even">
-                              </ul>
-                              <h4 class="roupas even"><a href="/roupas/casacos?PS=12" title="Casacos">Casacos (3)</a></h4>
-                              <ul class="casacos even">
-                              </ul>
-                              <h4 class="roupas even"><a href="/roupas/jaquetas?PS=12" title="Jaquetas">Jaquetas (2)</a></h4>
-                              <ul class="jaquetas even">
-                              </ul>
-                              <h4 class="roupas even"><a href="/roupas/saias?PS=12" title="Saias">Saias (8)</a></h4>
-                              <ul class="saias even">
-                              </ul>
-                              <h4 class="roupas even"><a href="/roupas/shorts?PS=12" title="Shorts">Shorts (6)</a></h4>
-                              <ul class="shorts even">
-                              </ul>
-                              <h4 class="roupas even"><a href="/roupas/macacao?PS=12" title="Macacão">Macacão (1)</a></h4>
-                              <ul class="macacao even">
-                              </ul>
-                              <h4 class="roupas even"><a href="/roupas/vestidos?PS=12" title="Vestidos">Vestidos (9)</a></h4>
-                              <ul class="vestidos even">
-                              </ul>
-                              <h4 class="roupas even"><a href="/roupas/blazer?PS=12" title="Blazer">Blazer (2)</a></h4>
-                              <ul class="blazer even">
-                              </ul>
-                              <h4 class="roupas even"><a href="/roupas/jeans?PS=12" title="Jeans">Jeans (3)</a></h4>
-                              <ul class="jeans even">
-                              </ul>
-                              <h4 class="roupas even">Tricot</h4>
-                              <ul class="tricot even">
-                              </ul>
-                              <h4 class="roupas even"><a href="/roupas/body?PS=12" title="Body">Body (3)</a></h4>
-                              <ul class="body even">
-                              </ul>
-                              <h4 class="roupas even"><a href="/roupas/cropped?PS=12" title="Cropped">Cropped (5)</a></h4>
-                              <ul class="cropped even">
-                              </ul>
-                              <h5 class="Hide Características HideTamanho">Tamanho</h5>
-                              <ul class="Tamanho Características">
-                                  <li><a href="/roupas/P?PS=12&map=c,specificationFilter_21" title="P">P (39)</a></li>
-                                  <li><a href="/roupas/M?PS=12&map=c,specificationFilter_21" title="M">M (38)</a></li>
-                                  <li><a href="/roupas/G?PS=12&map=c,specificationFilter_21" title="G">G (37)</a></li>
-                                  <li class="last"><a href="/roupas/GG?PS=12&map=c,specificationFilter_21" title="GG">GG (13)</a></li>
-                              </ul>
-                              <h5 class="Hide Características HideTamanho">Cor</h5>
-                              <ul class="Cor Características">
-                                  <li><a href="/roupas/Preto?PS=12&map=c,specificationFilter_21" title="Preto">Preto (39)</a></li>
-                                  <li><a href="/roupas/Verde?PS=12&map=c,specificationFilter_21" title="Verd">Verde (38)</a></li>
-                                  <li><a href="/roupas/AmareloPS=12&map=c,specificationFilter_21" title="Amarelo">Amarelo (37)</a></li>
-                                  <li class="last"><a href="/roupas/Vermelho?PS=12&map=c,specificationFilter_21" title="Vermelho">Vermelho (13)</a></li>
-                              </ul>
-                          </div>
-                      </div>
-                  </div>
-              </div>
-              <div class="urlLastSearch" style="display:none">
-                  /roupas
-              </div>
+        <div class="menu-navegue">
+          <a title="Navegue" class="search-navigator-tab tab-navegue-ativo" href="#">Navegar</a>
+          <a title="Refinar Resultado" class="search-navigator-tab tab-refinar" href="#">Refinar Resultado</a>
+        </div>
+        <div class="search-multiple-navigator" style="display: none;">
+          <h3 class="panelas">
+            <span></span>
+            <a href="{{STORE_URL_VTEX}}panelas" title="Panelas">Panelas</a>
+          </h3>
+          <h4 class="panelas">
+            <span></span>
+            <a href="{{STORE_URL_VTEX}}panelas" title="Panelas">Panelas</a>
+          </h4>
+          <a title="Refinar Resultado" class="bt-refinar search-filter-button even" href="#">Refinar Resultado</a>
+          <fieldset class="refino-marca even">
+            <h5 class="  even">Marca</h5>
+            <div class="">
+              <label>
+                <input rel="fq=B:2000002" class="multi-search-checkbox" type="checkbox" name="2000002" value="2000002" />BALLARINI (1) </label>
+              <label>
+                <input rel="fq=B:2000001" class="multi-search-checkbox" type="checkbox" name="2000001" value="2000001" />STAUB (1) </label>
+              <label>
+                <input rel="fq=B:2000000" class="multi-search-checkbox" type="checkbox" name="2000000" value="2000000" />ZWILLING (5) </label>
+            </div>
+          </fieldset>
+          <fieldset class="refino Informações de Produto">
+            <h5 class="  Informações de Produto">Material</h5>
+            <div class="">
+              <label>
+                <input rel="fq=specificationFilter_18:Alum%c3%adnio" class="multi-search-checkbox" type="checkbox" name="Alum%c3%adnio" value="Alum&#237;nio" />Alum&#237;nio (3) </label>
+              <label>
+                <input rel="fq=specificationFilter_18:Ferro+fundido" class="multi-search-checkbox" type="checkbox" name="Ferro+fundido" value="Ferro fundido" />Ferro fundido (2) </label>
+              <label>
+                <input rel="fq=specificationFilter_18:Cer%c3%a2mica" class="multi-search-checkbox" type="checkbox" name="Cer%c3%a2mica" value="Cer&#226;mica" />Cer&#226;mica (1) </label>
+              <label>
+                <input rel="fq=specificationFilter_18:A%c3%a7o+inoxid%c3%a1vel" class="multi-search-checkbox" type="checkbox" name="A%c3%a7o+inoxid%c3%a1vel" value="A&#231;o inoxid&#225;vel" />A&#231;o inoxid&#225;vel (1) </label>
+            </div>
+          </fieldset>
+          <fieldset class="refino even Informações de Produto">
+            <h5 class="  even Informações de Produto">Marca</h5>
+            <div class="">
+              <label>
+                <input rel="fq=specificationFilter_19:ZWILLING" class="multi-search-checkbox" type="checkbox" name="ZWILLING" value="ZWILLING" />ZWILLING (4) </label>
+              <label>
+                <input rel="fq=specificationFilter_19:STAUB" class="multi-search-checkbox" type="checkbox" name="STAUB" value="STAUB" />STAUB (1) </label>
+              <label>
+                <input rel="fq=specificationFilter_19:BALLARINI" class="multi-search-checkbox" type="checkbox" name="BALLARINI" value="BALLARINI" />BALLARINI (2) </label>
+            </div>
+          </fieldset>
+          <fieldset class="refino Informações de Produto">
+            <h5 class="  Informações de Produto">Cor</h5>
+            <div class="">
+              <label>
+                <input rel="fq=specificationFilter_20:Preto" class="multi-search-checkbox" type="checkbox" name="Preto" value="Preto" />Preto (3) </label>
+              <label>
+                <input rel="fq=specificationFilter_20:Vermelho+cereja" class="multi-search-checkbox" type="checkbox" name="Vermelho+cereja" value="Vermelho cereja" />Vermelho cereja (1) </label>
+            </div>
+          </fieldset>
+          <fieldset class="refino even Informações de Produto">
+            <h5 class="  even Informações de Produto">Tamanho</h5>
+            <div class="">
+              <label>
+                <input rel="fq=specificationFilter_21:20+cm" class="multi-search-checkbox" type="checkbox" name="20+cm" value="20 cm" />20 cm (1) </label>
+              <label>
+                <input rel="fq=specificationFilter_21:24+cm" class="multi-search-checkbox" type="checkbox" name="24+cm" value="24 cm" />24 cm (1) </label>
+              <label>
+                <input rel="fq=specificationFilter_21:30+cm" class="multi-search-checkbox" type="checkbox" name="30+cm" value="30 cm" />30 cm (1) </label>
+            </div>
+          </fieldset>
+        </div>
+        <div class="search-single-navigator" style="display:block">
+          <h3 class="panelas">
+            <span></span>
+            <a href="{{STORE_URL_VTEX}}panelas" title="Panelas">Panelas</a>
+          </h3>
+          <h4 class="panelas even">
+            <a href="{{STORE_URL_VTEX}}panelas/cacarolas/teste?PS=12" title="Caçarolas">Caçarolas (4)</a>
+          </h4>
+          <ul class="cacarolas even"></ul>
+          <h4 class="panelas even">
+            <a href="{{STORE_URL_VTEX}}panelas/conjuntos-de-panelas/teste?PS=12" title="Conjuntos de Panelas">Conjuntos de Panelas (1)</a>
+          </h4>
+          <ul class="conjuntos-de-panelas even"></ul>
+          <h4 class="panelas even">
+            <a href="{{STORE_URL_VTEX}}panelas/frigideiras/teste?PS=12" title="Frigideiras">Frigideiras (1)</a>
+          </h4>
+          <ul class="frigideiras even"></ul>
+          <h4 class="panelas even">
+            <a href="{{STORE_URL_VTEX}}panelas/grelhas/teste?PS=12" title="Grelhas">Grelhas (1)</a>
+          </h4>
+          <ul class="grelhas even"></ul>
+          <h5 class="Hide HideMarca">Marca</h5>
+          <ul class="Marca ">
+            <li>
+              <a href="{{STORE_URL_VTEX}}panelas/ballarini/teste?PS=12" title="BALLARINI">BALLARINI (1)</a>
+            </li>
+            <li>
+              <a href="{{STORE_URL_VTEX}}panelas/staub/teste?PS=12" title="STAUB">STAUB (1)</a>
+            </li>
+            <li class="last">
+              <a href="{{STORE_URL_VTEX}}panelas/zwilling/teste?PS=12" title="ZWILLING">ZWILLING (5)</a>
+            </li>
+          </ul>
+          <h5 class="Hide even Informações de Produto HideMaterial">Material</h5>
+          <ul class="Material  even Informações de Produto">
+            <li>
+              <a href="{{STORE_URL_VTEX}}panelas/Alumínio/teste?PS=12&map=c,specificationFilter_18,ft" title="Alumínio">Alumínio (3)</a>
+            </li>
+            <li>
+              <a href="{{STORE_URL_VTEX}}panelas/Ferro fundido/teste?PS=12&map=c,specificationFilter_18,ft" title="Ferro fundido">Ferro fundido (2)</a>
+            </li>
+            <li>
+              <a href="{{STORE_URL_VTEX}}panelas/Cerâmica/teste?PS=12&map=c,specificationFilter_18,ft" title="Cerâmica">Cerâmica (1)</a>
+            </li>
+            <li class="last">
+              <a href="{{STORE_URL_VTEX}}panelas/Aço inoxidável/teste?PS=12&map=c,specificationFilter_18,ft" title="Aço inoxidável">Aço inoxidável (1)</a>
+            </li>
+          </ul>
+          <h5 class="Hide Informações de Produto HideMarca">Marca</h5>
+          <ul class="Marca  Informações de Produto">
+            <li>
+              <a href="{{STORE_URL_VTEX}}panelas/ZWILLING/teste?PS=12&map=c,specificationFilter_19,ft" title="ZWILLING">ZWILLING (4)</a>
+            </li>
+            <li>
+              <a href="{{STORE_URL_VTEX}}panelas/STAUB/teste?PS=12&map=c,specificationFilter_19,ft" title="STAUB">STAUB (1)</a>
+            </li>
+            <li class="last">
+              <a href="{{STORE_URL_VTEX}}panelas/BALLARINI/teste?PS=12&map=c,specificationFilter_19,ft" title="BALLARINI">BALLARINI (2)</a>
+            </li>
+          </ul>
+          <h5 class="Hide even Informações de Produto HideCor">Cor</h5>
+          <ul class="Cor  even Informações de Produto">
+            <li>
+              <a href="{{STORE_URL_VTEX}}panelas/Preto/teste?PS=12&map=c,specificationFilter_20,ft" title="Preto">Preto (3)</a>
+            </li>
+            <li class="last">
+              <a href="{{STORE_URL_VTEX}}panelas/Vermelho cereja/teste?PS=12&map=c,specificationFilter_20,ft" title="Vermelho cereja">Vermelho cereja (1)</a>
+            </li>
+          </ul>
+          <h5 class="Hide Informações de Produto HideTamanho">Tamanho</h5>
+          <ul class="Tamanho  Informações de Produto">
+            <li>
+              <a href="{{STORE_URL_VTEX}}panelas/20 cm/teste?PS=12&map=c,specificationFilter_21,ft" title="20 cm">20 cm (1)</a>
+            </li>
+            <li>
+              <a href="{{STORE_URL_VTEX}}panelas/24 cm/teste?PS=12&map=c,specificationFilter_21,ft" title="24 cm">24 cm (1)</a>
+            </li>
+            <li class="last">
+              <a href="{{STORE_URL_VTEX}}panelas/30 cm/teste?PS=12&map=c,specificationFilter_21,ft" title="30 cm">30 cm (1)</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!-- END // Menu quanto em busca contendo lista de categorias e filtros -->
+    </div>
+  </div>
+  <div class="urlLastSearch" style="display:none">{{STORE_URL_VTEX}}Panelas</div>
 `,
 };
