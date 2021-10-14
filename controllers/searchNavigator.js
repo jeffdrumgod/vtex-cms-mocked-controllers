@@ -4,6 +4,12 @@ module.exports = {
   description: '',
   example: '<vtex.cmc:searchNavigator />',
   rendered: `
+  <!-- 
+  Opções de aplicação:
+  1) Busca por uma palavra, sem nenhuma categoria aplicada na busca.
+  2) Busca por uma palavra, dentro de uma categoria
+  3) Dentro de uma página de departamento, categoria
+  -->
   <!-- START // Script quanto em página de resultado de busca sem filtro por departamento -->
 <script type="text/javascript" language="javascript">
     $(document).ready(function() {
@@ -11,8 +17,8 @@ module.exports = {
     });
 </script>
 <!-- END // Script quanto em página de resultado de busca sem filtro por departamento -->
-<div id="ctl00_Conteudo_ctl02_divSideBar" class="navigation">
-    <div id="ctl00_Conteudo_ctl02_divSideBarUnica1" class="menu-departamento">
+<div class="navigation">
+    <div class="menu-departamento">
       <span class="rt"></span>
       <span class="rb"></span>
       <!-- START // Menu quanto em busca sem filtro por departamento -->
@@ -42,11 +48,12 @@ module.exports = {
       </ul>
       <!-- END // Menu quanto em busca sem filtro por departamento -->
       <!-- START // Menu quanto em busca contendo lista de categorias e filtros -->
-      <div>
+      <div> <!-- Essa div sem nenhuma classe, só existe quando estamos em uma busca, por uma palavra, dentro da categoria -->
         <div class="menu-navegue">
           <a title="Navegue" class="search-navigator-tab tab-navegue-ativo" href="#">Navegar</a>
           <a title="Refinar Resultado" class="search-navigator-tab tab-refinar" href="#">Refinar Resultado</a>
         </div>
+        <!-- OBS: em uma busca sem aplicado uma categoria, o search-multiple-navigator não existe, apenas o single -->
         <div class="search-multiple-navigator" style="display: none;">
           <h3 class="panelas">
             <span></span>
@@ -113,6 +120,7 @@ module.exports = {
             </div>
           </fieldset>
         </div>
+        <!-- OBS: search-single-navigator existe quando é apenas uma busca sem categoria aplicada na busca -->
         <div class="search-single-navigator" style="display:block">
           <h3 class="panelas">
             <span></span>

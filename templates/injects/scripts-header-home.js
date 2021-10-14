@@ -69,7 +69,6 @@ module.exports = {
       <script language="javascript"
            src="https://io.vtex.com.br/front-libs/dustjs-linkedin/2.3.5/dust-core-2.3.5.min.js?v=1.4.1512.2201" type="text/javascript"></script>
       <script language="javascript" src="https://io.vtex.com.br/vtex.js/2.11.2/vtex.min.js?v=1.4.1512.2201" type="text/javascript"></script>
-      <script language="javascript" src="https://io.vtex.com.br/vtex-id-ui/3.19.1/vtexid-jquery.min.js?v=1.4.1512.2201" type="text/javascript"></script>
       <script language="javascript" src="https://{{STORE_ID}}.vteximg.com.br/scripts/jquery.ui.core.js?v=1.4.1512.2201" type="text/javascript"></script>
       <script language="javascript" src="https://{{STORE_ID}}.vteximg.com.br/scripts/autocomplete/jquery.ui.widget.js?v=1.4.1512.2201" type="text/javascript"></script>
       <script language="javascript" src="https://{{STORE_ID}}.vteximg.com.br/scripts/autocomplete/jquery.ui.position.js?v=1.4.1512.2201" type="text/javascript"></script>

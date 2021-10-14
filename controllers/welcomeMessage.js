@@ -17,7 +17,7 @@ module.exports = {
 
 <script>
 $(document).ready(function () {
-    vtexid.setScope('e9ac9832-8bf4-4d87-9ce4-9c889d56baea');
+    vtexid.setScope('{{SCOPE_ID}}');
     vtexid.setScopeName('{{STORE_ID}}');
     $('body').on('click', '#login', function () {
         vtexid.start(

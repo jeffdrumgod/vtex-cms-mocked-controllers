@@ -75,7 +75,6 @@ module.exports = {
     <script language="javascript" src="//{{STORE_ID}}.vteximg.com.br/Scripts/autocomplete/jquery.ui.autocomplete.js?v=1.4.710.1275"  type="text/javascript"></script>
     <script language="javascript" src="//{{STORE_ID}}.vteximg.com.br/Scripts/vtex.commerce.search.js?v=1.4.710.1275"  type="text/javascript"></script>
     <script language="javascript" src="//{{STORE_ID}}.vteximg.com.br/Scripts/vtex.viewPart.fullTextSearchBox.js?v=1.4.710.1275"  type="text/javascript"></script>
-    <script language="javascript" src="https://io.vtex.com.br/vtex-id-ui/3.14.7/vtexid-jquery.min.js?v=1.4.1006.1700"  type="text/javascript"></script>
     <script language="javascript" src="//{{STORE_ID}}.vteximg.com.br/Scripts/vtex.viewPart.AccountAddress.js?v=1.4.710.1275"  type="text/javascript"></script>
     <script language="javascript" src="//{{STORE_ID}}.vteximg.com.br/Scripts/vtex.viewPart.AccountUserProfile.js?v=1.4.710.1275"  type="text/javascript"></script>
     <script language="javascript" src="//{{STORE_ID}}.vteximg.com.br/Scripts/jquery.maskedinput-1.2.2.js?v=1.4.710.1275"  type="text/javascript"></script>
